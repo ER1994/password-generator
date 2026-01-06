@@ -1,0 +1,107 @@
+body {
+    min-height: 100vh;
+    background-color: var(--grey-950);
+    font: var(--font-weight-bold) var(--font-size-regular) / var(--line-height-regular) var(--font-family-jetbrains-mono);
+    letter-spacing: var(--letter-spacing-regular);
+    color: var(--grey-200);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    width: 343px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font: var(--font-weight-bold) var(--font-size-regular) / var(--line-height-regular) var(--font-family-jetbrains-mono);
+    color: var(--grey-600);
+    margin: 0 0 var(--spacing-200) 0;
+}
+
+.generator-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-200);
+}
+
+.grey800-background {
+    background-color: var(--grey-800);
+}
+
+.password-value-container {
+    padding: var(--spacing-200);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#password-value {
+    font: var(--font-weight-bold) var(--font-size-large) / var(--line-height-large) var(--font-family-jetbrains-mono);
+    color: var(--grey-700);
+    margin: 0;
+}
+
+#copy-button {
+    background-color: transparent;
+    border: none;
+}
+
+.password-form {
+    padding: var(--spacing-200);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-400);
+}
+
+.char-length-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-100);
+}
+
+.char-length-result {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: var(--spacing-200);
+}
+
+.char-length-output {
+    font: var(--font-weight-bold) var(--font-size-large) / var(--line-height-large) var(--font-family-jetbrains-mono);
+    color: var(--green-200);
+}
+
+.char-range {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 8px;
+    background: var(--grey-900);
+    outline: none;
+}
+
+.char-range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    /*appearance: none;*/
+    width: 28px;
+    height: 28px;
+    background-color: var(--grey-200);
+    border-radius: 50%;
+}
+
+.char-range::-moz-range-thumb {
+    width: 28px;
+    height: 28px;
+    background-color: var(--grey-200);
+/*    border: none;*/
+    border-radius: 50%;
+}

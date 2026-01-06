@@ -7,9 +7,12 @@
     <link href="./assets/images/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
 
     <title>Frontend Mentor | Password generator app</title>
-    <script src="./copy-handler.js" defer></script>
-    <script src="./form-handler.js" defer></script>
-    <script src="./password-generator.js" defer></script>
+    <link href="normalize.css" rel="stylesheet">
+    <link href="variables.css" rel="stylesheet">
+    <link href="main.css" rel="stylesheet">
+    <script defer src="./copy-handler.js"></script>
+    <script defer src="./form-handler.js"></script>
+    <script defer src="./password-generator.js"></script>
 </head>
 <body>
 <main>
@@ -18,18 +21,22 @@
             Password Generator
         </h1>
     </header>
-    <section>
-        <p id="password-value">P4$5W0rD!</p>
-        <div id="copy-button-container">
+    <div class="generator-container ">
+        <section class="grey800-background password-value-container">
+            <p id="password-value">P4$5W0rD!</p>
+            <!--            <div id="copy-button-container">-->
             <button id="copy-button" type="button"><img alt="" src="./assets/images/icon-copy.svg"></button>
-        </div>
-    </section>
-    <section>
-        <form id="password-form">
-            <div id="char-length-container">
-                <label for="char-length">Character Length</label>
-                <output for="char-length" name="character-length"></output>
-                <input id="char-length" max="20" min="0" name="char-length" step="1" type="range" value="10"/>
+            <!--            </div>-->
+        </section>
+        <!--        <section class="grey800-background">-->
+        <form class="grey800-background password-form" id="password-form">
+            <div class="char-length-container" id="char-length-container">
+                <div class="char-length-result">
+                    <label for="char-length">Character Length</label>
+                    <output class="char-length-output" for="char-length" name="character-length"></output>
+                </div>
+                <input class="char-range" id="char-length" max="20" min="0" name="char-length" step="1" type="range"
+                       value="0"/>
             </div>
             <fieldset id="password-settings">
                 <label>Password settings</label>
@@ -49,14 +56,15 @@
                 <span class="strength-bar">|</span>
                 <span class="strength-bar">|</span>
             </div>
-            <button type="submit" id="generate-button">
+            <button id="generate-button" type="submit">
                 <div>
                     <p>Generate</p>
                     <img alt="" src="./assets/images/icon-arrow-right.svg">
                 </div>
             </button>
         </form>
-    </section>
+        <!--        </section>-->
+    </div>
 </main>
 </body>
 </html>
