@@ -14,7 +14,10 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    /*align-items: center;*/
+}
+header {
+    text-align: center;
 }
 
 h1 {
@@ -24,10 +27,11 @@ h1 {
 }
 
 .generator-container {
+    /*width: 100%;*/
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    /*align-items: center;*/
     gap: var(--spacing-200);
 }
 
@@ -40,7 +44,7 @@ h1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
+    /*width: 100%;*/
     box-sizing: border-box;
 }
 
@@ -57,6 +61,7 @@ h1 {
 
 .password-form {
     padding: var(--spacing-200);
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     gap: var(--spacing-400);
@@ -65,7 +70,7 @@ h1 {
 .char-length-container {
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-100);
+    gap: var(--spacing-200);
 }
 
 .char-length-result {
@@ -104,4 +109,118 @@ h1 {
     background-color: var(--grey-200);
 /*    border: none;*/
     border-radius: 50%;
+}
+
+#password-settings {
+    border: none;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-200);
+    margin: 0;
+    padding: 0;
+}
+
+.password-options {
+    display: flex;
+    gap: var(--spacing-200);
+}
+
+.password-options input[type="checkbox"] {
+    appearance: none;
+    border: solid 2px var(--grey-200);
+    width: 20px;
+    height: 20px;
+}
+
+.strength-container {
+    padding: var(--spacing-200);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--grey-850);
+}
+
+.strength-container p {
+    margin: 0;
+    color: var(--grey-600);
+}
+
+.strength-bars {
+    display: flex;
+    gap: var(--spacing-100);
+}
+
+.strength-bar {
+    width: 10px;
+    height: 28px;
+    border: solid 2px var(--grey-200);
+}
+
+#generate-button {
+    background-color: var(--green-200);
+    margin-top: -16px;
+}
+
+#generate-button div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-200);
+}
+
+#generate-button p {
+    color: var(--grey-800);
+}
+
+/*STATES*/
+.char-range::-webkit-slider-thumb:active {
+    border: solid 2px var(--green-200);
+    background-color: transparent;
+}
+
+.char-range::-moz-range-thumb:active {
+    border: solid 2px var(--green-200);
+    background-color: transparent;
+}
+
+.password-options input[type="checkbox"]:active {
+    border: solid 2px var(--green-200);
+}
+
+.password-options input[type="checkbox"]:checked {
+    border: solid 2px var(--green-200);
+    background-color: var(--green-200);
+    background-image: url("./assets/images/icon-check.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#generate-button:active {
+    border: solid 2px var(--green-200);
+    background-color: transparent;
+}
+
+#generate-button:active p {
+    color: var(--green-200);
+}
+#generate-button:active svg path{
+    fill: #A4FFAF;
+}
+
+@media (min-width: 768px) {
+    main {
+        width: 540px;
+    }
+
+    .generator-container  {
+        gap: var(--spacing-300);
+    }
+
+    .password-form {
+        padding: var(--spacing-300) var(--spacing-400);
+    }
+
+    #generate-button {
+        margin-top: 0px;
+    }
 }

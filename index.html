@@ -39,28 +39,37 @@
                        value="0"/>
             </div>
             <fieldset id="password-settings">
-                <label>Password settings</label>
-                <input id="uppercase" name="uppercase-letters" type="checkbox"/>
-                <label for="uppercase">Include Uppercase Letters</label>
-                <input id="lowercase" name="lowercase-letters" type="checkbox"/>
-                <label for="lowercase">Include Lowercase Letters</label>
-                <input id="numbers" name="numbers" type="checkbox"/>
-                <label for="numbers">Include Numbers</label>
-                <input id="symbols" name="symbols" type="checkbox"/>
-                <label for="symbols">Include Symbols</label>
+                <label style="display: none">Password settings</label>
+                <div class="password-options">
+                    <input id="uppercase" name="uppercase" type="checkbox">
+                    <label for="uppercase">Include Uppercase Letters</label>
+                </div>
+                <div class="password-options">
+                    <input id="lowercase" name="lowercase" type="checkbox"/>
+                    <label for="lowercase">Include Lowercase Letters</label>
+                </div>
+                <div class="password-options">
+                    <input id="numbers" name="numbers" type="checkbox"/>
+                    <label for="numbers">Include Numbers</label>
+                </div>
+                <div class="password-options">
+                    <input id="symbols" name="symbols" type="checkbox"/>
+                    <label for="symbols">Include Symbols</label>
+                </div>
             </fieldset>
-            <div>Strength</div>
-            <div class="strength-bars" data-strength="0">
-                <span class="strength-bar">|</span>
-                <span class="strength-bar">|</span>
-                <span class="strength-bar">|</span>
-                <span class="strength-bar">|</span>
+            <div class="strength-container">
+                <p>STRENGTH</p>
+                <div class="strength-bars" data-strength="0">
+                    <span class="strength-bar"></span>
+                    <span class="strength-bar"></span>
+                    <span class="strength-bar"></span>
+                    <span class="strength-bar"></span>
+                </div>
             </div>
             <button id="generate-button" type="submit">
                 <div>
-                    <p>Generate</p>
-                    <img alt="" src="./assets/images/icon-arrow-right.svg">
-                </div>
+                    <p>GENERATE</p>
+                    <svg width="12" height="12" xmlns="http://www.w3.org/2000/svg"><path fill="#24232C" d="m5.106 12 6-6-6-6-1.265 1.265 3.841 3.84H.001v1.79h7.681l-3.841 3.84z"/></svg>                </div>
             </button>
         </form>
         <!--        </section>-->

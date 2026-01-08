@@ -22,13 +22,12 @@ function generatePassword (e) {
             charSet += charSets[checkbox.id]
         }
     })
-    if (charSet === "") {
+
+    const charLength = parseInt(passLength.value)
+    if (charSet === "" || charLength <= 0) {
         passValue.innerText = "ERROR!"
         return
     }
-
-    const charLength = parseInt(passLength.value)
-
     for (let i = 0; i < charLength; i++) {
         let charIndex = Math.floor(Math.random() * charSet.length)
         result += charSet[charIndex]
