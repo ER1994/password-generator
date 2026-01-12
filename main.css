@@ -14,7 +14,6 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /*align-items: center;*/
 }
 header {
     text-align: center;
@@ -27,11 +26,9 @@ h1 {
 }
 
 .generator-container {
-    /*width: 100%;*/
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /*align-items: center;*/
     gap: var(--spacing-200);
 }
 
@@ -44,7 +41,6 @@ h1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /*width: 100%;*/
     box-sizing: border-box;
 }
 
@@ -96,7 +92,7 @@ h1 {
 
 .char-range::-webkit-slider-thumb {
     -webkit-appearance: none;
-    /*appearance: none;*/
+    appearance: none;
     width: 28px;
     height: 28px;
     background-color: var(--grey-200);
@@ -107,7 +103,6 @@ h1 {
     width: 28px;
     height: 28px;
     background-color: var(--grey-200);
-/*    border: none;*/
     border-radius: 50%;
 }
 
@@ -147,7 +142,18 @@ h1 {
 
 .strength-bars {
     display: flex;
+    justify-content: space-between;
+    gap: var(--spacing-200);
+}
+
+.strength-bar-container {
+    display: flex;
     gap: var(--spacing-100);
+}
+
+#strength-level {
+    font: var(--font-weight-bold) var(--font-size-large) / var(--line-height-large) var(--font-family-jetbrains-mono);
+    color: var(--grey-200);
 }
 
 .strength-bar {
@@ -223,4 +229,26 @@ h1 {
     #generate-button {
         margin-top: 0px;
     }
+}
+
+
+/*STRENGTH BAR STYLES*/
+.strength-bars[data-strength="1"] .strength-bar:nth-child(1) {
+    border: solid 2px var(--red-500);
+    background-color: var(--red-500);
+}
+
+.strength-bars[data-strength="2"] .strength-bar:nth-child(-n+2) {
+    border: solid 2px var(--orange-400);
+    background-color: var(--orange-400);
+}
+
+.strength-bars[data-strength="3"] .strength-bar:nth-child(-n+3) {
+    border: solid 2px var(--yellow-300);
+    background-color: var(--yellow-300);
+}
+
+.strength-bars[data-strength="4"] .strength-bar:nth-child(-n+4) {
+    border: solid 2px var(--green-200);
+    background-color: var(--green-200);
 }
