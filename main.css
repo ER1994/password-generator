@@ -143,6 +143,7 @@ h1 {
 .strength-bars {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     gap: var(--spacing-200);
 }
 
@@ -152,7 +153,7 @@ h1 {
 }
 
 #strength-level {
-    font: var(--font-weight-bold) var(--font-size-large) / var(--line-height-large) var(--font-family-jetbrains-mono);
+    font: var(--font-weight-bold) var(--font-size-regular) / var(--line-height-regular) var(--font-family-jetbrains-mono);
     color: var(--grey-200);
 }
 
@@ -224,6 +225,10 @@ h1 {
 
     .password-form {
         padding: var(--spacing-300) var(--spacing-400);
+    }
+
+    #strength-level {
+        font: var(--font-weight-bold) var(--font-size-large) / var(--line-height-large) var(--font-family-jetbrains-mono);
     }
 
     #generate-button {
