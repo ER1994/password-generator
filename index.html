@@ -7,9 +7,13 @@
     <link href="./assets/images/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
 
     <title>Frontend Mentor | Password generator app</title>
-    <script src="./copy-handler.js" defer></script>
-    <script src="./form-handler.js" defer></script>
-    <script src="./password-generator.js" defer></script>
+    <link href="normalize.css" rel="stylesheet">
+    <link href="variables.css" rel="stylesheet">
+    <link href="main.css" rel="stylesheet">
+    <script defer src="char-length-handler.js"></script>
+    <script defer src="strength-bar-handler.js"></script>
+    <script defer src="./copy-handler.js"></script>
+    <script defer src="./password-generator.js"></script>
 </head>
 <body>
 <main>
@@ -18,45 +22,61 @@
             Password Generator
         </h1>
     </header>
-    <section>
-        <p id="password-value">P4$5W0rD!</p>
-        <div id="copy-button-container">
+    <div class="generator-container ">
+        <section class="grey800-background password-value-container">
+            <p id="password-value">P4$5W0rD!</p>
             <button id="copy-button" type="button"><img alt="" src="./assets/images/icon-copy.svg"></button>
-        </div>
-    </section>
-    <section>
-        <form id="password-form">
-            <div id="char-length-container">
-                <label for="char-length">Character Length</label>
-                <output for="char-length" name="character-length"></output>
-                <input id="char-length" max="20" min="0" name="char-length" step="1" type="range" value="10"/>
+        </section>
+        <form class="grey800-background password-form" id="password-form">
+            <div class="char-length-container" id="char-length-container">
+                <div class="char-length-result">
+                    <label for="char-length">Character Length</label>
+                    <output class="char-length-output" for="char-length" name="character-length"></output>
+                </div>
+                <input class="char-range" id="char-length" max="20" min="0" name="char-length" step="1" type="range"
+                       value="0"/>
             </div>
             <fieldset id="password-settings">
-                <label>Password settings</label>
-                <input id="uppercase" name="uppercase-letters" type="checkbox"/>
-                <label for="uppercase">Include Uppercase Letters</label>
-                <input id="lowercase" name="lowercase-letters" type="checkbox"/>
-                <label for="lowercase">Include Lowercase Letters</label>
-                <input id="numbers" name="numbers" type="checkbox"/>
-                <label for="numbers">Include Numbers</label>
-                <input id="symbols" name="symbols" type="checkbox"/>
-                <label for="symbols">Include Symbols</label>
+                <label style="display: none">Password settings</label>
+                <div class="password-options">
+                    <input id="uppercase" name="uppercase" type="checkbox">
+                    <label for="uppercase">Include Uppercase Letters</label>
+                </div>
+                <div class="password-options">
+                    <input id="lowercase" name="lowercase" type="checkbox"/>
+                    <label for="lowercase">Include Lowercase Letters</label>
+                </div>
+                <div class="password-options">
+                    <input id="numbers" name="numbers" type="checkbox"/>
+                    <label for="numbers">Include Numbers</label>
+                </div>
+                <div class="password-options">
+                    <input id="symbols" name="symbols" type="checkbox"/>
+                    <label for="symbols">Include Symbols</label>
+                </div>
             </fieldset>
-            <div>Strength</div>
-            <div class="strength-bars" data-strength="0">
-                <span class="strength-bar">|</span>
-                <span class="strength-bar">|</span>
-                <span class="strength-bar">|</span>
-                <span class="strength-bar">|</span>
+            <div class="strength-container">
+                <p>STRENGTH</p>
+                <div class="strength-bars" data-strength=0 id='strength-bars'>
+                    <p id="strength-level"></p>
+                    <div class="strength-bar-container">
+                        <span class="strength-bar"></span>
+                        <span class="strength-bar"></span>
+                        <span class="strength-bar"></span>
+                        <span class="strength-bar"></span>
+                    </div>
+                </div>
             </div>
-            <button type="submit" id="generate-button">
+            <button id="generate-button" type="submit">
                 <div>
-                    <p>Generate</p>
-                    <img alt="" src="./assets/images/icon-arrow-right.svg">
+                    <p>GENERATE</p>
+                    <svg height="12" width="12" xmlns="http://www.w3.org/2000/svg">
+                        <path d="m5.106 12 6-6-6-6-1.265 1.265 3.841 3.84H.001v1.79h7.681l-3.841 3.84z" fill="#24232C"/>
+                    </svg>
                 </div>
             </button>
         </form>
-    </section>
+    </div>
 </main>
 </body>
 </html>

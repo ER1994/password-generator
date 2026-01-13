@@ -1,0 +1,56 @@
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('assets/fonts/JetBrainsMono-VariableFont_wght.ttf') format('truetype');
+    font-weight: 700;
+}
+:root {
+    /*COLORS*/
+    --white: hsl(0,100%,100%);
+    --black: hsl(0,0%,0%);
+    --grey-950: hsl(255,22%,4%);
+    --grey-900: hsl(248,17%,9%);
+    --grey-850: hsl(248,15%,11%);
+    --grey-800: hsl(248,10%,15%);
+    --grey-700: hsl(248,5%,34%);
+    --grey-600: hsl(251,9%,53%);
+    --grey-200: hsl(252,11%,91%);
+    --green-200: hsl(127,100%,82%);
+    --yellow-300: hsl(42,91%,68%);
+    --orange-400: hsl(13,95%,66%);
+    --red-500: hsl(0,91%,63%);
+
+    /*FONTS*/
+    --font-size-xl: 32px;
+    --font-size-large: 24px;
+    --font-size-medium: 18px;
+    --font-size-regular: 16px;
+
+    /*LINE HEIGHT*/
+    --line-height-xl: 42px;
+    --line-height-large: 32px;
+    --line-height-medium: 24px;
+    --line-height-regular: 20px;
+
+    /*LETTER SPACING*/
+    --letter-spacing-regular: 0px;
+
+    /*FONT WEIGHT*/
+    --font-weight-bold: 700;
+
+    /*FONT FAMILY:*/
+    --font-family-jetbrains-mono: 'JetBrains Mono', monospace;
+
+    /*SPACING*/
+    --spacing-100: 8px;
+    --spacing-200: 16px;
+    --spacing-300: 24px;
+    --spacing-400: 32px;
+    --spacing-700: 56px;
+    --spacing-1000: 80px;
+    --spacing-1300: 104px;
+    --spacing-1600: 128px;
+    --spacing-2000: 160px;
+    --spacing-2200: 176px;
+    --spacing-2300: 184px;
+}
+
